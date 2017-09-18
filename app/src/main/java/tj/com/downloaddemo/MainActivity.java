@@ -64,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
                 downloadBinder.startDownload(url, storagePath);
             }
         });
+        Button btnDownLoadVideo = (Button)findViewById(R.id.btnDownLoadVideo);
+        btnDownLoadVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://106.14.182.235/source/coldplay.mp4";
+                downloadBinder.startDownload(url,storagePath);
+            }
+        });
+
         btnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,26 +105,42 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        Button btnPop = (Button)findViewById(R.id.btnPop);
+        Button btnPop = (Button) findViewById(R.id.btnPop);
         btnPop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this,IndexActivity.class);
-                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this,0,intent1,PendingIntent.FLAG_UPDATE_CURRENT);
+                Intent intent1 = new Intent(MainActivity.this, IndexActivity.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                Notification notification =new NotificationCompat.Builder(MainActivity.this).setContentTitle("通知标题")
+                Notification notification = new NotificationCompat.Builder(MainActivity.this).setContentTitle("通知标题")
                         .setContentText("通知内容")
                         .setSmallIcon(R.mipmap.ic_launcher)
-                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                         .setWhen(System.currentTimeMillis())
                         .setContentIntent(pendingIntent)
-                        .setProgress(100,20,false)
+                        .setProgress(100, 20, false)
                         .setAutoCancel(true)
                         .setPriority(NotificationCompat.PRIORITY_MAX)
                         .build();
-                NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-                manager.notify(1,notification);
+                manager.notify(1, notification);
+            }
+        });
+        Button btnMusic = (Button) findViewById(R.id.btnMusic);
+        btnMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(MainActivity.this,MusicPlayActivity.class);
+                startActivity(intent1);
+            }
+        });
+        Button btnVideo = (Button) findViewById(R.id.btnVideo);
+        btnVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainActivity.this,VideoPlayActivity.class);
+                startActivity(intent2);
             }
         });
 

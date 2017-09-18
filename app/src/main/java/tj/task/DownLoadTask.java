@@ -61,9 +61,8 @@ public class DownLoadTask extends AsyncTask<String, Integer, Integer> {
             String downLoadUrl = params[0];
             String fileName = downLoadUrl.substring(downLoadUrl.lastIndexOf("/"));
             String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-            directory = FilePathUtil.GetExternalMusicFilePath();
+
             Log.d(TAG, "doInBackground: 下载路径："+directory);
-//            directory = params[1];
 
             file = new File(directory + fileName);
             if (file.exists()) {

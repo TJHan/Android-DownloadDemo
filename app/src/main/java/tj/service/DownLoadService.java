@@ -127,7 +127,7 @@ public class DownLoadService extends Service {
                 if (downloadUrl != null) {
                     String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
                     String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-                    directory = FilePathUtil.GetExternalMusicFilePath();
+
 //                    directory = storagePath;
                     File file = new File(directory + fileName);
                     if (file.exists()) {

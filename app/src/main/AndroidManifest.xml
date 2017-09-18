@@ -22,7 +22,9 @@
 
         <service android:name="tj.service.DownLoadService" />
 
-        <activity android:name=".IndexActivity"></activity>
+        <activity android:name=".IndexActivity" />
+        <activity android:name=".MusicPlayActivity" />
+        <activity android:name=".VideoPlayActivity"></activity>
     </application>
 
 </manifest>

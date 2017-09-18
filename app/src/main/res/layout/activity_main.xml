@@ -8,7 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnDownLoad"
-        android:text="Start DownLoad"/>
+        android:text="下载音乐"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDownLoadVideo"
+        android:text="下载视频"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,4 +35,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnPop"
         android:text="弹一个通知"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMusic"
+        android:text="打开听音乐"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVideo"
+        android:text="打开看视频"/>
 </LinearLayout>

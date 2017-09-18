@@ -1,0 +1,4 @@
+这是一个Android异步下载的demo，知识点包括：
+1.四大组件之一： service
+2.异步任务：AsyncTask
+3.通知：Notification
